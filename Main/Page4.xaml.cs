@@ -97,15 +97,15 @@ namespace Main
 
                 g1.Begin(OpenGL.GL_LINE_LOOP);
 
-                g1.Vertex(matrix[63, 0], matrix[63, 1]);
-                g1.Vertex(matrix[15, 0], matrix[15, 1]);
-                g1.Vertex(matrix[23, 0], matrix[23, 1]);
-                g1.Vertex(matrix[17, 0], matrix[17, 1]);
-                g1.Vertex(matrix[18, 0], matrix[18, 1]);
-                g1.Vertex(matrix[35, 0], matrix[35, 1]);
-                g1.Vertex(matrix[27, 0], matrix[27, 1]);
-                g1.Vertex(matrix[59, 0], matrix[59, 1]);
-                g1.Vertex(matrix[63, 0], matrix[63, 1]);
+                g1.Vertex(matrix[0, 0], matrix[0, 1]);
+                g1.Vertex(matrix[28, 0], matrix[28, 1]);
+                g1.Vertex(matrix[21, 0], matrix[21, 1]);
+                g1.Vertex(matrix[25, 0], matrix[25, 1]);
+                g1.Vertex(matrix[10, 0], matrix[10, 1]);
+                g1.Vertex(matrix[13, 0], matrix[13, 1]);
+                g1.Vertex(matrix[47, 0], matrix[47, 1]);
+                g1.Vertex(matrix[40, 0], matrix[40, 1]);
+                g1.Vertex(matrix[0, 0], matrix[0, 1]);
 
 
                 g1.End();

@@ -10,6 +10,8 @@ namespace Main
     {
         private double[,] matrix;
         List<HurwiczTable> result = new List<HurwiczTable>();
+         
+        /////////////////////////
 
         public HurwiczCriterion(LossMatrix matrix)
         {

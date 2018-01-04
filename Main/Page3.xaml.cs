@@ -88,11 +88,12 @@ namespace Main
                 DrawXY();
                 g1.Begin(OpenGL.GL_LINE_LOOP);
 
-                g1.Vertex(matrix.Matrix[7, 0], matrix.Matrix[7, 1]);
-                g1.Vertex(matrix.Matrix[1, 0], matrix.Matrix[1, 1]);
-                g1.Vertex(matrix.Matrix[2, 0], matrix.Matrix[2, 1]);
+                g1.Vertex(matrix.Matrix[0, 0], matrix.Matrix[0, 1]);
+                g1.Vertex(matrix.Matrix[4, 0], matrix.Matrix[4, 1]);
                 g1.Vertex(matrix.Matrix[3, 0], matrix.Matrix[3, 1]);
-                g1.Vertex(matrix.Matrix[7, 0], matrix.Matrix[7, 1]);
+                g1.Vertex(matrix.Matrix[2, 0], matrix.Matrix[2, 1]);
+                g1.Vertex(matrix.Matrix[5, 0], matrix.Matrix[5, 1]);
+                g1.Vertex(matrix.Matrix[0, 0], matrix.Matrix[0, 1]);
 
                 g1.End();
 
