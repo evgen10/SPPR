@@ -1,0 +1,78 @@
+﻿<Window x:Class="Main.LabTwo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpf="clr-namespace:SharpGL.WPF;assembly=SharpGL.WPF"
+        xmlns:local="clr-namespace:Main"
+        mc:Ignorable="d"
+        Title="Линейное программирование" WindowStyle="ToolWindow" Height="573" ResizeMode="NoResize" Width="950.5">
+    <Grid Margin="0,10,2,0" Height="421" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="11*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="235*"/>
+            <RowDefinition Height="186*"/>
+        </Grid.RowDefinitions>
+        <Button Content="Вычислить" HorizontalAlignment="Left" Margin="400,78,0,0" VerticalAlignment="Top" Width="99" Click="Button_Click" Height="31"/>
+        <Button Content="Построить" HorizontalAlignment="Left" Margin="80,182,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_1" Height="20"/>
+        <DataGrid x:Name="gridTable" Height="216" Margin="400,126,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="509" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Label Content="X2" HorizontalAlignment="Left" Margin="34,176,0,0" VerticalAlignment="Top" Height="26" Width="24"/>
+        <wpf:OpenGLControl x:Name="OpenGLControl"
+                                Width="300"
+                                Height="300"
+                           
+                                Margin="36,206,0,-85"
+                               Resized="OpenGLControl_Resized"
+                               OpenGLDraw="OpenGLControl_OpenGLDraw"
+                               OpenGLInitialized="OpenGLControl_OpenGLInitialized" HorizontalAlignment="Left"
+                               KeyDown="OpenGLControl_KeyDown" VerticalAlignment="Top" Grid.RowSpan="2"    />
+        <Button Content="Вперед" HorizontalAlignment="Left" Margin="260,206,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_2" Height="20"/>
+        <Button Content="Назад" HorizontalAlignment="Left" Margin="260,226,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_3" Height="20" Grid.RowSpan="2"/>
+        <Label Content="X1" Margin="356,0,0,-85" Grid.Row="1" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="24"/>
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="21,6,0,0" VerticalAlignment="Top" Height="26" Width="33"/>
+        <Label Content="Фамилия" HorizontalAlignment="Left" Margin="21,32,0,0" VerticalAlignment="Top" Width="78" Height="26"/>
+        <TextBox  x:Name="tbName" HorizontalAlignment="Left" Height="23" Margin="77,6,0,0" TextWrapping="Wrap" Text="ЕВГЕНИЙ" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbSName" HorizontalAlignment="Left" Height="23" Margin="77,35,0,0" TextWrapping="Wrap" Text="ЧЕРНЫШКОВ" VerticalAlignment="Top" Width="120"/>
+        <Label Content="a1" HorizontalAlignment="Left" Margin="232,4,0,0" VerticalAlignment="Top" Height="26" Width="23"/>
+        <Label Content="a2" HorizontalAlignment="Left" Margin="232,30,0,0" VerticalAlignment="Top" Height="26" Width="23"/>
+        <Label Content="b1" HorizontalAlignment="Left" Margin="334,4,0,0" VerticalAlignment="Top" Height="26" Width="24"/>
+        <TextBox x:Name="tbA11" HorizontalAlignment="Left" Height="24" Margin="260,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26"  Text="11"/>
+        <TextBox x:Name="tbA21" HorizontalAlignment="Left" Height="24" Margin="260,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26"  Text="21"/>
+        <TextBox x:Name="tbA31" HorizontalAlignment="Left" Height="24" Margin="260,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26"  Text="31"/>
+        <TextBox x:Name="tbA12" HorizontalAlignment="Left" Height="24" Margin="291,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26"  Text="12"/>
+        <TextBox x:Name="tbA22" HorizontalAlignment="Left" Height="24" Margin="291,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26"  Text="22"/>
+        <TextBox x:Name="tbA32" HorizontalAlignment="Left" Height="24" Margin="291,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26"  Text="32"/>
+        <TextBox x:Name="tbB1" HorizontalAlignment="Left" Height="24" Margin="356,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26"  Text="b1"/>
+        <TextBox x:Name="tbB2" HorizontalAlignment="Left" Height="24" Margin="356,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26"  Text="b2"/>
+        <Label Content="c" HorizontalAlignment="Left" Margin="232,95,0,0" VerticalAlignment="Top" Height="26" Width="16"/>
+        <TextBox x:Name="tbC1" HorizontalAlignment="Left" Height="24" Margin="260,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26"  Text="c1"/>
+        <TextBox x:Name="tbC2" HorizontalAlignment="Left" Height="24" Margin="291,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26"  Text="c2"/>
+        <Label Content="b2" HorizontalAlignment="Left" Margin="334,30,0,0" VerticalAlignment="Top" Height="26" Width="24"/>
+        <Label Content="a2" HorizontalAlignment="Left" Margin="232,59,0,0" VerticalAlignment="Top" Height="26" Width="23"/>
+        <Label Content="b3" HorizontalAlignment="Left" Margin="334,59,0,0" VerticalAlignment="Top" Height="26" Width="24"/>
+        <TextBox x:Name="tbB3" HorizontalAlignment="Left" Height="24" Margin="356,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26"  Text="b2"/>
+        <Button Content="Считать данные" HorizontalAlignment="Left" Margin="28,67,0,0" VerticalAlignment="Top" Width="138" Click="Button_Click_4" Height="20"/>
+        <Button Content="+" HorizontalAlignment="Left" Margin="260,22,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click_5" Height="20"/>
+        <Button Content="-" HorizontalAlignment="Left" Margin="260,42,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click_6" Height="20"/>
+        <Label x:Name="lbFunc" HorizontalAlignment="Left" Margin="28,92,0,59" Width="145" Content="a11X1+a12X2&lt;=b1&#xD;&#xA;a21X1+a22X2&lt;=b2&#xD;&#xA;a31X1+a32X2&lt;=b3&#xD;&#xA;c1X1+c2X2--&gt;MAX&#xD;&#xA;"/>
+        <Label x:Name="lbSimplex" HorizontalAlignment="Left" Margin="400,6,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="67" Width="284" Content="a11X1 + a12X2 + X3 = b1&#xD;&#xA;a21X1 + a22X2 + X4 = b2&#xD;&#xA;a31X1 + a32X2 + X5 = b3&#xD;&#xA;"/>
+        <Label x:Name="lbX1" Content="X1" HorizontalAlignment="Left" Height="39" Margin="400,163,0,-16" Grid.Row="1" VerticalAlignment="Top" Width="268" FontSize="20" Grid.ColumnSpan="2"/>
+        <Label x:Name="lbX2" Content="X2" HorizontalAlignment="Left" Margin="400,207,0,-58" Grid.Row="1" Width="205" FontSize="20"/>
+        <Label x:Name="lbFx" Content="План выпуска" HorizontalAlignment="Left" Height="45" Margin="400,244,0,-103" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="319" FontSize="20"/>
+        <Label  HorizontalAlignment="Left" Margin="159,102,0,0" VerticalAlignment="Top" Background="Green" Height="9" Width="38"/>
+        <Label  HorizontalAlignment="Left" Margin="159,118,0,0" VerticalAlignment="Top" Background="Red"  Height="9" Width="38"/>
+        <Label  HorizontalAlignment="Left" Margin="159,133,0,0" VerticalAlignment="Top" Background="Blue" Height="9" Width="38"/>
+        <Label  HorizontalAlignment="Left" Margin="159,150,0,0" VerticalAlignment="Top" Background="Black" Height="9" Width="38"/>
+
+        <Image Margin="388,10,195,173" Source="1.JPG" Stretch="Fill"/>
+        <Image Margin="16,97,567,86" Source="1.JPG" Stretch="Fill"/>
+
+
+
+
+
+    </Grid>
+</Window>
